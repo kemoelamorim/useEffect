@@ -1,12 +1,16 @@
 import React from 'react'
 import Carousel from '../../components/carousel/Carousel'
+import { AppStyled } from '../AppStyle'
+import Content from '../Content'
+import Header from '../Header'
 
 const Search = () => {
 
   return (
-    <div>
-      <Carousel></Carousel>
-    </div>
+    <AppStyled>
+      <Header/>
+      <Content/>
+    </AppStyled>
   )
 }
 

@@ -2,11 +2,16 @@ import React, { createElement, useEffect, useRef } from 'react'
 
 class SlideCarousel{
   constructor(element: any){
-    const slideItems: any = document.createElement('div')
-    slideItems.classList.add('slide-items')
-    slideItems.innerHTML = 'oi'
-    element.appendChild(slideItems)
+    this.createSlideItems(element)
     
+  }
+  createSlideItems(nodeDom: any){
+    const slideItems = this.criaElemento('div');
+    slideItems.classList.add('slide-items')
+    nodeDom.appendChild(slideItems)
+  }
+  criaElemento(typeTag: string){
+    return document.createElement(typeTag)
   }
 }
 
